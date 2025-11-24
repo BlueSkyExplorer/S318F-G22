@@ -1,0 +1,22 @@
+<h2><%= title %></h2>
+
+<form method="<%= method %>" action="<%= action %>">
+  <div>
+    <label>Name:</label>
+    <input type="text" name="name" value="<%= restaurant.name || '' %>" required />
+  </div>
+  <div>
+    <label>District:</label>
+    <input type="text" name="district" value="<%= restaurant.district || '' %>" required />
+  </div>
+  <div>
+    <label>Cuisine:</label>
+    <input type="text" name="cuisine" value="<%= restaurant.cuisine || '' %>" required />
+  </div>
+  <div>
+    <label>Rating:</label>
+    <input type="number" name="rating" step="0.1" min="0" max="5" value="<%= restaurant.rating || '' %>" />
+  </div>
+  <button type="submit">Submit</button>
+  <a href="/restaurants">Cancel</a>
+</form>

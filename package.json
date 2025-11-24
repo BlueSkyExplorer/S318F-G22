@@ -1,0 +1,23 @@
+{
+  "name": "restaurant-manager",
+  "description": "COMPS381F - Restaurant Manager",
+  "author": "Group 22",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "*",
+    "ejs": "*",
+    "body-parser": "*",
+    "cookie-session": "*",
+    "mongoose": "*",
+    "method-override": "*",
+    "express-ejs-layouts": "*",
+    "dotenv": "*"
+  },
+  "engine": {
+    "node >= 12.0.0"
+  },
+  "scripts": {
+    "start": "node server"
+  }
+}
+

@@ -1,0 +1,62 @@
+<!-- ✅ 正確：只包含頁面主要內容 -->
+<h2>Restaurants</h2>
+
+<h3>Search</h3>
+<form method="GET" action="/restaurants">
+  <div>
+    <label>Name:</label>
+    <input type="text" name="name" value="<%= query.name || '' %>" />
+  </div>
+  <div>
+    <label>District:</label>
+    <input type="text" name="district" value="<%= query.district || '' %>" />
+  </div>
+  <div>
+    <label>Cuisine:</label>
+    <input type="text" name="cuisine" value="<%= query.cuisine || '' %>" />
+  </div>
+  <div>
+    <label>Min Rating:</label>
+    <input type="number" name="minRating" step="0.1" value="<%= query.minRating || '' %>" />
+  </div>
+  <button type="submit">Search</button>
+  <a href="/restaurants">Reset</a>
+</form>
+
+<hr>
+
+<a href="/restaurants/new">Add New Restaurant</a>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>District</th>
+      <th>Cuisine</th>
+      <th>Rating</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if (restaurants.length === 0) { %>
+      <tr>
+        <td colspan="5">No restaurants found.</td>
+      </tr>
+    <% } else { %>
+      <% restaurants.forEach(restaurant => { %>
+        <tr>
+          <td><%= restaurant.name %></td>
+          <td><%= restaurant.district %></td>
+          <td><%= restaurant.cuisine %></td>
+          <td><%= restaurant.rating || 'N/A' %></td>
+          <td>
+            <a href="/restaurants/<%= restaurant._id %>/edit">Edit</a>
+            <form method="POST" action="/restaurants/<%= restaurant._id %>?_method=DELETE" style="display:inline;">
+              <button type="submit" onclick="return confirm('Are you sure?')">Delete</button>
+            </form>
+          </td>
+        </tr>
+      <% }); %>
+    <% } %>
+  </tbody>
+</table>
