@@ -1,5 +1,4 @@
 <h2><%= title %></h2>
-
 <form method="<%= method %>" action="<%= action %>">
   <div>
     <label>Name:</label>
@@ -7,15 +6,15 @@
   </div>
   <div>
     <label>District:</label>
-    <input type="text" name="district" value="<%= restaurant.district || '' %>" required />
+    <input type="text" name="district" value="<%= restaurant.district || '' %>" />
   </div>
   <div>
     <label>Cuisine:</label>
-    <input type="text" name="cuisine" value="<%= restaurant.cuisine || '' %>" required />
+    <input type="text" name="cuisine" value="<%= restaurant.cuisine || '' %>" />
   </div>
   <div>
     <label>Rating:</label>
-    <input type="number" name="rating" step="0.1" min="0" max="5" value="<%= restaurant.rating || '' %>" />
+    <input type="number" name="rating" step="1" min="1" max="5" value="<%= restaurant.rating || '' %>" />
   </div>
   <button type="submit">Submit</button>
   <a href="/restaurants">Cancel</a>
