@@ -5,7 +5,7 @@ Group members: Lam Man Ho 13609049 Lui Hoi Ting 13135177
 
 2. Project file intro:
 - server.js:
-The server provides Login/Logout pages functionalities, basic CRUD web pages and RESTful CRUD services for users. Using cookie-session for the authentication.
+The server provides Login/Logout pages functionalities, basic CRUD web pages and RESTful CRUD services for users. Using cookie-session for the authentication. User authentication currently relies on the hardcoded `users` array defined in `server.js`, which contains two accounts (`admin`/`123456` and `guest`/`guest`).
 - package.json: 
 Lists of dependencies: express, ejs, body-parser, cookie-session, mongoose, method-override, express-ejs-layouts, dotenv
 - public: style.css: For application styling
@@ -14,8 +14,7 @@ layout.ejs:  Main layout template with header and navigation
 login.ejs: User login page
 restaurants_form.ejs: Form for creating/editing restaurants
 restaurants_list.ejs: Restaurant listing and search page
-- models: restaurants.js: Define the fields in restaurants data model, which should contain: name, district, cuisine and rating
-user.js: Define the fields in user model, which should contain: username and password
+- models: restaurants.js: Define the fields in restaurants data model, which should contain: name, district, cuisine and rating. A user model is planned but not yet implemented, so there is no `models/user.js` file at this time.
 
 3. The cloud-based server URL (your server host running on the cloud platform) for testing:
 https://restaurant-manager-g22.onrender.com
