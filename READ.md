@@ -34,11 +34,12 @@ Logout steps:
 2. Redirect to the login page when logout successfully 
 
 - Use of your CRUD web pages: 
-Steps for CREATE - add new restaurant 
-1. Click "Add New Restaurant" button 
-2. Fill in the form: Name (required), District (required), Cuisine (required), Rating (optional, 0-5)
+Steps for CREATE - add new restaurant
+1. Click "Add New Restaurant" button
+2. Fill in the form: Name (required), District (optional), Cuisine (optional), Rating (optional, must be between 1-5)
 3. Click "Submit" button
-4. Redirect to restaurant list after add successfully 
+4. Redirect to restaurant list after add successfully
+*Validation is enforced in* `views/restaurants_form.ejs` *and* `models/restaurant.js`.
 
 Steps for READ - view and search restaurants
 1. All restaurants will be listed in a table format
