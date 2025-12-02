@@ -60,7 +60,7 @@ Steps for DELETE - remove restaurants
 3. Redirect to restaurant list with the deletion of the restaurant
 
 - Use of your RESTful CRUD services: 
-Create 
-Read
-Update
-Delete
+1. Create: curl -X POST https://restaurant-manager-g22.onrender.com/api/restaurants -H "Content-Type: application/json" -d "{\"name\":\"Golden Dragon\",\"district\":\"Kowloon\",\"cuisine\":\"Chinese\",\"rating\":5}"
+2. Read: curl https://restaurant-manager-g22.onrender.com/api/restaurants
+3. Update: curl -X PUT https://restaurant-manager-g22.onrender.com/api/restaurants/674321abc123def456789012 -H "Content-Type: application/json" -d "{\"name\":\"Golden Dragon Palace\",\"rating\":4}"
+4. Delete: curl -X DELETE https://restaurant-manager-g22.onrender.com/api/restaurants/674321abc123def456789012
